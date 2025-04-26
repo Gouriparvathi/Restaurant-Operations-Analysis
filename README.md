@@ -26,12 +26,37 @@ Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World
 
 ---
 
-## 🧠 Insights Uncovered
+## 🧠 Insights And Recommendations
+### Key Findings:
 
-- Best and worst performing menu items
-- Spending behavior across large orders
-- Cuisine/category demand breakdown
-- Revenue trends across order timeframes
+- **Most Expensive Item:** Shrimp Scampi *(Italian)*
+- **Least Expensive Item:** Edamame *(Asian)*
+- **Top Selling Item:** Hamburger *(American)* — *622 orders (5.14%)*
+- **Least Selling Item:** Chicken Tacos *(Mexican)* — *123 orders (1.02%)*
+- **Best Performing Category (Revenue):** Italian (31% of total revenue)
+- **Least Performing Category (Revenue):** American (18% of total revenue)
+- **Order Timing:**
+  - January: 36.12% of orders
+  - February: 20.22%
+  - March: 23.49%
+  - Only ~2.2% of orders in each later month
+- **Average Order Value:** $13.16
+- **Average Item Price:** $13.29
+- **Most Popular Category (by volume):** Asian (28% of orders)
+- **Total Orders:** 5.3K
+- **Total Items Ordered:** 12.1K
+
+---
+
+### 📈 Business Recommendations:
+
+- Focus marketing around **Italian dishes** — they generate the highest revenue.
+- Investigate why **American cuisine** has lower revenue despite high item popularity (Hamburger).
+- Promote **Chicken Tacos** through discounts or bundled meals to boost its sales.
+- Launch **off-season promotions** during months after March to boost low order volume.
+- Expand **Asian cuisine** offerings to capitalize on its strong customer demand.
+- Implement **upselling strategies** to increase the average order value beyond $13.16.
+
 
 ---
 
@@ -74,15 +99,16 @@ Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World
 
 I've also created an interactive dashboard to visualize insights like top dishes, sales trends, and high-value orders.
 
-➡️ [Download the Power BI Dashboard (.pbix)](dashboards/restaurant_orders.pbix)
+➡️ [Download the Power BI Dashboard (.pbix)](Dashboards/Restaurant_Orders_Analysis_Dashboard.pbix)
 
 ### Sneak Peek:
-![Dashboard Screenshot](dashboards/dashboard_screenshot1.png)
+![Dashboard Screenshot](Dashboards/RO_Dashboard_Screenshot.png)
 
 ---
 
 ## 🛠️ Tools I Used
 
+- **Excel**: For data cleaning and formatting
 - **SQL**: PostgreSQL for querying and data analysis
 - **Power BI**: For data visualization
 - **Git & GitHub**: For version control and sharing my work
