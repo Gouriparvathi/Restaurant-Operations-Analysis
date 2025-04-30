@@ -1,10 +1,58 @@
-# 🍽️ Restaurant Orders Analysis - SQL & Power BI Project
+# 🍽️ Case Study – Taste of the World Café  
+## SQL & Power BI Analysis by Gouri Parvathi
 
 Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World Café**. The goal was to assess how customers responded to a newly launched menu and to better understand ordering patterns using SQL and Power BI.
 
----
+## 📌 Contents  
+- [Introduction](#introduction)  
+- [Problem Statement](#problem-statement)
+- [Table Structure](#table-structure) 
+- [Entity Relationship Diagram](#entity-relationship-diagram)  
+- [Case Study Objectives & Solutions](#case-study-objectives)  
+- [Insights & Recommendations](#insights-and-recommendations)
+- [File Structure](#file-structure)
+- [Dashboard Preview](#power-bi-dashboard)
+- [Tools Used](#tools-i-used)    
 
-## 🎯 Project Objectives
+
+## Introduction  
+In early 2024, **Taste of the World Café** introduced a revamped, globally inspired menu to spice up customer interest and boost revenue. The café sought to understand how well the new menu was performing, which dishes were gaining traction, and what ordering patterns could be uncovered.
+
+With customer-level ordering data and item-level menu data available, this case study explores those trends using SQL and Power BI.
+
+## Problem Statement
+Taste of the World Café wants to:
+
+- Evaluate the performance of its updated menu
+- Analyze customer ordering behavior
+- Uncover insights that can inform future marketing and product decisions
+The café hopes to use these findings to refine its offerings, target the right customer segments, and create seasonal marketing campaigns to reduce off-peak slumps.
+
+## Table Structure
+
+### `menu_items` Table  
+| Field         | Description                                      |
+|---------------|--------------------------------------------------|
+| menu_item_id  | Unique ID of a menu item                         |
+| item_name     | Name of the menu item                            |
+| category      | Cuisine or type of dish                          |
+| price         | Price of the item in US Dollars ($)              |
+
+### `order_details` Table  
+| Field             | Description                                      |
+|------------------|--------------------------------------------------|
+| order_details_id | Unique ID of an item within an order             |
+| order_id         | Order reference ID                               |
+| order_date       | Date of the order (MM/DD/YY)                     |
+| order_time       | Time the order was placed (HH:MM:SS AM/PM)       |
+| item_id          | Foreign key matching `menu_item_id` from `menu_items` |
+
+## Entity Relationship Diagram  
+
+**menu_items** ←→ **order_details**  
+(1-to-many based on menu_item_id = item_id)
+
+## Case Study Objectives
 
 ### 1️⃣ Explore the Menu
 - Count how many items are available.
@@ -24,9 +72,7 @@ Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World
 - Highlight the top 5 highest-spending orders.
 - Explore what made those high-spend orders unique.
 
----
-
-## 🧠 Insights And Recommendations
+## Insights And Recommendations
 ### Key Findings:
 
 - **Most Expensive Item:** Shrimp Scampi *(Italian)*
@@ -46,8 +92,6 @@ Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World
 - **Total Orders:** 5.3K
 - **Total Items Ordered:** 12.1K
 
----
-
 ### 📈 Business Recommendations:
 
 - Focus marketing around **Italian dishes** — they generate the highest revenue.
@@ -57,31 +101,7 @@ Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World
 - Expand **Asian cuisine** offerings to capitalize on its strong customer demand.
 - Implement **upselling strategies** to increase the average order value beyond $13.16.
 
-
----
-
-## 🗃️ Table Structure
-
-### `menu_items` Table  
-| Field         | Description                                      |
-|---------------|--------------------------------------------------|
-| menu_item_id  | Unique ID of a menu item                         |
-| item_name     | Name of the menu item                            |
-| category      | Cuisine or type of dish                          |
-| price         | Price of the item in US Dollars ($)              |
-
-### `order_details` Table  
-| Field             | Description                                      |
-|------------------|--------------------------------------------------|
-| order_details_id | Unique ID of an item within an order             |
-| order_id         | Order reference ID                               |
-| order_date       | Date of the order (MM/DD/YY)                     |
-| order_time       | Time the order was placed (HH:MM:SS AM/PM)       |
-| item_id          | Foreign key matching `menu_item_id` from `menu_items` |
-
----
-
-## 📁 File Structure
+## File Structure
 📦 Restaurant-Orders/
  ┣ 📜 restaurant_orders_analysis.sql
  ┣ 📜 README.md
@@ -95,7 +115,7 @@ Hi! I'm Gouri Parvathi, and this is my analysis project for **Taste of the World
 
 ---
 
-## 📊 Power BI Dashboard
+## Power BI Dashboard
 
 I've also created an interactive dashboard to visualize insights like top dishes, sales trends, and high-value orders.
 
@@ -106,7 +126,7 @@ I've also created an interactive dashboard to visualize insights like top dishes
 
 ---
 
-## 🛠️ Tools I Used
+## Tools I Used
 
 - **Excel**: For data cleaning and formatting
 - **SQL**: PostgreSQL for querying and data analysis
